@@ -1,0 +1,1 @@
+<?phpif(isset($_POST['post_id'])) {	$id = (int)$_POST['post_id'];	$json = array();	unset($_SESSION['nhb_basket'][$id]);	$json = nhb_get_basket(true);	echo json_encode($json);	die();}?>
